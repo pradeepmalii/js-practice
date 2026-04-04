@@ -47,3 +47,32 @@ demoHeading1.classList.remove("highlight")
 demoHeading1.classList.toggle("highlight")    
 demoHeading1.classList.contains("highlight") 
 
+
+//Modifying Attributes
+let demoBtn = document.querySelector("#btn")
+
+console.log(demoBtn.getAttribute("id"))
+
+demoBtn.setAttribute("disable", true)
+demoBtn.setAttribute("class", "primary-btn")
+
+demoBtn.removeAttribute("disabled")
+
+
+//CREATING AND INSERTING ELEMENTS
+let newItem = document.createElement("li")
+newItem.textContent = "Item 4"
+
+let list = document.querySelector("#list")
+
+list.append(newItem)  //to add at the end of the list
+// list.prepend(newItem)  to add at the start of the list 
+
+
+//REMOVING ELEMENTS
+let demoList = document.querySelector("#list")
+let firstItem = document.querySelector("li")
+
+firstItem.remove()
+
+list.removeChild(list.firstElementChild)
