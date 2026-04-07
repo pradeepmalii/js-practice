@@ -1,0 +1,1 @@
+An event is a signal fired by the browser when something happens — user action or browser action. An event listener is a function attached to an element that waits for a specific event and executes a callback when it fires.
