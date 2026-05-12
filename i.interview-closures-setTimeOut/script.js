@@ -2,7 +2,7 @@ function x(){
     var i = 1
     setTimeout(function(){
       console.log(i)
-    }, 10000)//here it does not mean that code is blocked for 5 sec , and will execute after 5 sec , it executs immediately and the browser handles timer separately 
+    }, 10000)//here it does not mean that code is blocked for 5 sec , and will execute after 5 sec , it executs immediately and the browser handles timer separately
     console.log("thes prints first")
 }   
 x()
@@ -41,3 +41,21 @@ function c(){
 }
 }
 c()//earlier used ONE shared variable i . now close(i) creates a NEW execution context every iteration.the parameter i is a NEW LOCAL VARIABLE.So each function call gets its own separate copy
+
+//another closures interview question
+function outest(){
+    let c = 90
+    function outer(b){
+        
+        function inner(){
+            console.log(a, b, c)
+        }
+        // let a = 10
+        return inner
+    }
+    return outer
+}
+// let a = 7050
+// outer()()
+var close = outest()("Pradeep")
+close()
